@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Faculty+Glyphic&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Faculty Glyphic', sans-serif;
+  background-color: #faf9f7;
+  color: #2d2d2d;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+h1, h2 {
+  font-family: 'Ballet', cursive;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #9b7fb8;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #9b7fb8;
+}
+
+h3 {
+  font-size: 1.75rem;
+  color: #52b788;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 1.25rem;
+  color: #52b788;
+  text-transform: uppercase;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+}
+
+a {
+  color: #9b7fb8;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+a:hover {
+  border-bottom-color: #9b7fb8;
+  opacity: 0.8;
+}
+
+button {
+  font-family: 'Faculty Glyphic', sans-serif;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: 2px solid #52b788;
+  background-color: transparent;
+  color: #52b788;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 25px;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: #52b788;
+  color: #faf9f7;
+}
+
+input, textarea {
+  font-family: 'Faculty Glyphic', sans-serif;
+  padding: 0.75rem;
+  border: 2px solid #e0d9d1;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #9b7fb8;
+}
+
+ul, ol {
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: #999;
+}
+
+.spacing-lg {
+  margin: 3rem 0;
+}
+
+.spacing-md {
+  margin: 2rem 0;
+}
+
+.accent-color {
+  color: #9b7fb8;
+}
+
+.accent-bg {
+  background-color: #f0e8f5;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  .container {
+    padding: 1.5rem;
+  }
+}
