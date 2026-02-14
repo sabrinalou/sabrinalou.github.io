@@ -12,7 +12,7 @@ html, body, #root {
 
 body {
   font-family: 'Faculty Glyphic', sans-serif;
-  background-color: #faf9f7;
+  background-color: #f0e8f5;
   color: #2d2d2d;
   line-height: 1.6;
   font-weight: 400;
@@ -39,13 +39,12 @@ h2 {
 h3 {
   font-size: 1.75rem;
   color: #52b788;
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 
 h4 {
   font-size: 1.25rem;
   color: #52b788;
-  text-transform: uppercase;
 }
 
 p {
@@ -71,18 +70,19 @@ button {
   font-family: 'Faculty Glyphic', sans-serif;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
-  border: 2px solid #52b788;
+  /* border: 2px solid #52b788; */
   background-color: transparent;
   color: #52b788;
   cursor: pointer;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
   border-radius: 25px;
   font-weight: 500;
+  border: none;
 }
 
 button:hover {
-  background-color: #52b788;
-  color: #faf9f7;
+  /* background-color: #52b788;
+  color: #faf9f7; */
 }
 
 input, textarea {
@@ -142,7 +142,7 @@ img {
 }
 
 .accent-bg {
-  background-color: #f0e8f5;
+  background-color: #faf9f7;
   padding: 2rem;
   border-radius: 12px;
 }
@@ -158,10 +158,86 @@ img {
   }
 
   h3 {
-    font-size: 1.25rem;
+    font-size: 1.25rem;;
   }
 
   .container {
     padding: 1.5rem;
   }
 }
+
+/* App.css */
+@keyframes slow-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes heart-burst-0 {
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 1; }
+  100% { transform: translate(150px, 0) scale(0) rotate(360deg); opacity: 0; }
+}
+
+@keyframes heart-burst-45 {
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 1; }
+  100% { transform: translate(106px, -106px) scale(0) rotate(360deg); opacity: 0; }
+}
+
+@keyframes heart-burst-90 {
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 1; }
+  100% { transform: translate(0, -150px) scale(0) rotate(360deg); opacity: 0; }
+}
+
+@keyframes heart-burst-135 {
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 1; }
+  100% { transform: translate(-106px, -106px) scale(0) rotate(360deg); opacity: 0; }
+}
+
+@keyframes heart-burst-180 {
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 1; }
+  100% { transform: translate(-150px, 0) scale(0) rotate(360deg); opacity: 0; }
+}
+
+@keyframes heart-burst-225 {
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 1; }
+  100% { transform: translate(-106px, 106px) scale(0) rotate(360deg); opacity: 0; }
+}
+
+@keyframes heart-burst-270 {
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 1; }
+  100% { transform: translate(0, 150px) scale(0) rotate(360deg); opacity: 0; }
+}
+
+@keyframes heart-burst-315 {
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 1; }
+  100% { transform: translate(106px, 106px) scale(0) rotate(360deg); opacity: 0; }
+}
+
+.rotate-slow {
+  animation: slow-spin 30s linear infinite;
+}
+
+.rotate-slow:hover {
+  cursor: url('heart.png'), auto;
+}
+
+.heart-burst {
+  position: fixed;
+  font-size: 2rem;
+  pointer-events: none;
+  z-index: 9999;
+  will-change: transform;
+  margin: -1rem 0 0 -1rem;
+}
+
+.heart-burst[data-angle="0"] { animation: heart-burst-0 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
+.heart-burst[data-angle="45"] { animation: heart-burst-45 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
+.heart-burst[data-angle="90"] { animation: heart-burst-90 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
+.heart-burst[data-angle="135"] { animation: heart-burst-135 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
+.heart-burst[data-angle="180"] { animation: heart-burst-180 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
+.heart-burst[data-angle="225"] { animation: heart-burst-225 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
+.heart-burst[data-angle="270"] { animation: heart-burst-270 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
+.heart-burst[data-angle="315"] { animation: heart-burst-315 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
