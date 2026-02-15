@@ -25,7 +25,7 @@ function Counter() {
   const handleHeartBurst = (e) => {
     handleIncrement();
 
-    if (count >= 15) {
+    if (count == 15) {
       alert("15 belly rubs is good but not enough!!! almost like spending 15 months together, but it still not being enough ;)");
     } else {
       const rect = e.currentTarget.getBoundingClientRect();
